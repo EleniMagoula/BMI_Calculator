@@ -10,8 +10,13 @@ namespace BMI_Calculator
 
         public Person(double height, double weight)
         {
-            Height = height;
+            Height = HeightInMeters(height);
             Weight = weight;
+        }
+
+        private double HeightInMeters(double height)
+        {
+            return height / 100;
         }
     }
 }

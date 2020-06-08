@@ -19,18 +19,11 @@ namespace BMI_Calculator
 
         public void Calculate_BMI()
         {
-            double height = HeightInMeters(Person.Height);
+            Person.Height *= Person.Height;
 
-            height = height * height;
-
-            BodyMassIndex = Person.Weight / height;
+            BodyMassIndex = Person.Weight / Person.Height;
 
             WeightStatus();
-        }
-
-        private double HeightInMeters(double height)
-        {
-            return height / 100;
         }
 
         private void WeightStatus()
